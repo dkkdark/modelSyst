@@ -57,45 +57,23 @@ for n in n_count:
 
 # Count error. Code above is the save as in zd2
 
-error_1 = []
-error_2 = []
-error_3 = []
-error_4 = []
-error_5 = []
-
-for val in Seria_1:
-    error = abs((val - math.pi) / math.pi)
-    error_1.append(error)
-print("Error 1: ", sum(error_1) / len(error_1))
-
-for val in Seria_2:
-    error = abs((val - math.pi) / math.pi)
-    error_2.append(error)
-print("Error 2: ", sum(error_2) / len(error_2))
-
-for val in Seria_3:
-    error = abs((val - math.pi) / math.pi)
-    error_3.append(error)
-print("Error 3: ", sum(error_3) / len(error_3))
-
-for val in Seria_4:
-    error = (val - math.pi) / math.pi
-    error_4.append(error)
-print("Error 4: ", sum(error_4) / len(error_4))
-
-for val in Seria_5:
-    error = (val - math.pi) / math.pi
-    error_5.append(error)
-print("Error 5: ", sum(error_5) / len(error_5))
-
 average1 = sum(Seria_1) / len(Seria_1)
 average2 = sum(Seria_2) / len(Seria_2)
 average3 = sum(Seria_3) / len(Seria_3)
 average4 = sum(Seria_4) / len(Seria_4)
 average5 = sum(Seria_5) / len(Seria_5)
 
-
 average = (average1 + average2 + average3 + average4 + average5) / 5
 
+average1_error = (average1 - math.pi) / math.pi
+average2_error = (average2 - math.pi) / math.pi
+average3_error = (average3 - math.pi) / math.pi
+average4_error = (average4 - math.pi) / math.pi
+average5_error = (average5 - math.pi) / math.pi
 average_error = (average - math.pi) / math.pi
+print("Average Error 1: ", average1_error)
+print("Average Error 2: ", average2_error)
+print("Average Error 3: ", average3_error)
+print("Average Error 4: ", average4_error)
+print("Average Error 5: ", average5_error)
 print("Average Error: ", average_error)
